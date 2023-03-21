@@ -1,16 +1,67 @@
-body {
-    background: url('/assets/images/background-image.jpeg');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200;400&display=swap');
+
+* {
+    
 }
 
+    
+
+body {
+    background: url('/assets/images/background-image.jpeg')no-repeat, center;
+    font-family: Raleway, sans-serif;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
 
 .game-area {
-    width: 500px;
-    height: 500px;
-    background-color: beige;
-    margin: 0 auto;
+    width: 75%;
+    height: 150%;
+    background-color: rgba(220, 241, 250, 0.9); 
+    border-radius: 10px;
+}
+
+#question{
     display: flex;
-    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.answer-area {
+    margin-bottom: 30px;
+    width: 70%;
+    /*height: 30%;*/
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
 
+  }
 
-}
+  .choice-container{
+    width: 40%;
+    margin: 10px;
+    font-size: 10px;
+    display: inline-block;
+    background: white;
+  }
+
+  .choice-container:hover {
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.5);
+  }
+
+  .score-area{
+    margin: auto;
+    text-align: center;
+  }
+  .choice-text{
+    width: 75%;
+  }
+
+  .indicator-icon{
+    height: 5px;
+    width: 5px;
+    border-radius: 50%;
+    background-color: red;
+    border: black;
+  }
