@@ -29,10 +29,13 @@ let questions = [
 
 
 document.addEventListener("DOMContentLoaded", function() {
-    let questionAnswer = getAQuestion();
-    checkAnswer(questionAnswer);
+    nextQuestion();
  })
  
+ function nextQuestion (){
+    let questionAnswer = getAQuestion();
+    checkAnswer(questionAnswer);
+}
  
  
  
@@ -50,3 +53,27 @@ document.addEventListener("DOMContentLoaded", function() {
      
  };
  
+ function checkAnswer(Answer){
+    let answers = document.getElementsByClassName('choice-container');
+        for (let answer of answers) {      
+            answer.addEventListener('click', function() {
+                console.log(answer.dataset['number']);
+    
+         
+               let givenAnswer = answer.dataset['number'];       
+    
+          if (givenAnswer == Answer) {
+    
+                  alert ("Correct");
+                  nextQuestion();
+                }
+    
+                else {
+                  alert ("incorrect");
+                  nextQuestion();
+                };
+                
+            })
+     };
+    
+    }; 
