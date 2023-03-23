@@ -28,19 +28,27 @@ let questions = [
 ];
 
 
+
+
+
+function delay(time){
+    return new Promise(resolve => setTimeout(resolve, time));
+}
 document.addEventListener("DOMContentLoaded", function() {
     nextQuestion();
  })
  
  function nextQuestion (){
+    console.log("In function NextQuestion")
     let questionAnswer = getAQuestion();
+    console.log("questionAnswer" + questionAnswer);
     checkAnswer(questionAnswer);
 }
  
  
  
  function getAQuestion(){
-     
+    console.log("In function GetAQuestion")
      let x = Math.floor(Math.random() *questions.length);
  
      document.getElementById("question").innerHTML=questions[x].question;
@@ -49,31 +57,35 @@ document.addEventListener("DOMContentLoaded", function() {
      document.getElementById("choice-text-3").innerHTML=questions[x].option3;
      document.getElementById("choice-text-4").innerHTML=questions[x].option4;
      return questions[x].answer;
-     questions.splice(x); 
+     
      
  };
  
- function checkAnswer(Answer){
+ function checkAnswer(realAnswer){ 
+    console.log("In function checkAnswer")
+    console.log("realAnswer no 1 " + realAnswer);
     let answers = document.getElementsByClassName('choice-container');
         for (let answer of answers) {      
             answer.addEventListener('click', function() {
-                console.log(answer.dataset['number']);
-    
+                console.log("realAnswer no 2 " + realAnswer);
+                console.log("buttonpress" + answer.dataset['number']);
+                
          
-               let givenAnswer = answer.dataset['number'];       
+               givenAnswer = answer.dataset['number'];       
+               
+               if (givenAnswer == realAnswer) {
     
-          if (givenAnswer == Answer) {
+                alert ("Correct");
+                delay(1000).then(() => nextQuestion());
+              }
     
-                  alert ("Correct");
-                  nextQuestion();
-                }
-    
-                else {
-                  alert ("incorrect");
-                  nextQuestion();
-                };
+              else {
+                alert ("incorrect");
+                delay(1000).then(() => nextQuestion());
+              };
+                
                 
             })
-     };
-    
-    }; 
+        };
+       
+}; 
