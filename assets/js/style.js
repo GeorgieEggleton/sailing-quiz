@@ -30,25 +30,43 @@ let questions = [
 
 
 
+let questionNumber;
 
 function delay(time){
     return new Promise(resolve => setTimeout(resolve, time));
 }
+
+
 document.addEventListener("DOMContentLoaded", function() {
-    nextQuestion();
- })
+    
+    questionNumber = getAQuestion();
+
+
+
+    let answers = document.getElementsByClassName('choice-container');
+      
+    
+    for (let answer of answers) {      
+            answer.addEventListener('click', function() {
+                let givenAnswer = answer.dataset['number'];      
+               
+                checkAnswer(givenAnswer);
+                
+            })
+        }
+    
+    });
+
  
  function nextQuestion (){
-    console.log("In function NextQuestion")
-    let questionAnswer = getAQuestion();
-    console.log("questionAnswer" + questionAnswer);
-    checkAnswer(questionAnswer);
+    questionNumber = getAQuestion();
+
 }
  
  
  
  function getAQuestion(){
-    console.log("In function GetAQuestion")
+
      let x = Math.floor(Math.random() *questions.length);
  
      document.getElementById("question").innerHTML=questions[x].question;
@@ -56,26 +74,18 @@ document.addEventListener("DOMContentLoaded", function() {
      document.getElementById("choice-text-2").innerHTML=questions[x].option2;
      document.getElementById("choice-text-3").innerHTML=questions[x].option3;
      document.getElementById("choice-text-4").innerHTML=questions[x].option4;
-     return questions[x].answer;
+   
+     return x;
+     
      
      
  };
  
- function checkAnswer(realAnswer){ 
-    console.log("In function checkAnswer")
-    console.log("realAnswer no 1 " + realAnswer);
-    let answers = document.getElementsByClassName('choice-container');
-        for (let answer of answers) {      
-            answer.addEventListener('click', function() {
-                console.log("realAnswer no 2 " + realAnswer);
-                console.log("buttonpress" + answer.dataset['number']);
-                
-         
-               givenAnswer = answer.dataset['number'];       
-               
-               if (givenAnswer == realAnswer) {
+ function checkAnswer(givenAnswer){ 
     
+               if (givenAnswer == questions[questionNumber].answer) {
                 alert ("Correct");
+                
                 delay(1000).then(() => nextQuestion());
               }
     
@@ -85,7 +95,7 @@ document.addEventListener("DOMContentLoaded", function() {
               };
                 
                 
-            })
-        };
+            
+};
        
-}; 
+
