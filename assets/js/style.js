@@ -31,10 +31,9 @@ let questions = [
 
 
 let questionNumber;
+let questionCount = 0;
 
-function delay(time){
-    return new Promise(resolve => setTimeout(resolve, time));
-}
+
 
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -59,7 +58,16 @@ document.addEventListener("DOMContentLoaded", function() {
 
  
  function nextQuestion (){
+    console.log("Question Count = " + questionCount); 
+    questionCount += 1;
+    if(questionCount != 0){
+      console.log("question Number= " + questionNumber);
+        questions.splice(questionNumber, 1);
+        console.log(questions);
+    }
     questionNumber = getAQuestion();
+   
+    
 
 }
  
@@ -86,16 +94,18 @@ document.addEventListener("DOMContentLoaded", function() {
                if (givenAnswer == questions[questionNumber].answer) {
                 alert ("Correct");
                 
-                delay(1000).then(() => nextQuestion());
+                
+                setTimeout(nextQuestion, 1000);
+               
               }
     
               else {
                 alert ("incorrect");
-                delay(1000).then(() => nextQuestion());
+                setTimeout(nextQuestion, 1000);
+              
               };
                 
                 
             
 };
        
-
