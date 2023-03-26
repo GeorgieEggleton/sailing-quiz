@@ -30,6 +30,9 @@ body {
     display: flex;
     justify-content: center;
     margin-top: 50px;
+    padding-left: 30px;
+    padding-right: 30px;
+
 }
 
 .answer-area {
@@ -54,10 +57,18 @@ body {
     box-shadow: 0 3px 10px rgb(0 0 0 / 0.5);
   }
 
-  .score-area{
+  #score-area{
     margin: auto;
     text-align: center;
   }
+
+  #count-area{
+    #score-area
+      margin: auto;
+      text-align: center;
+  }
+
+  
   .choice-text{
     width: 75%;
   }
