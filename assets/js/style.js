@@ -73,7 +73,7 @@ let questions = [
 
      {
         question: "If it is very windy you can make a boats sail smaller, what is this called?", 
-        options1: "Reefing",
+        option1: "Reefing",
         option2: "Triming",
         option3: "Tacking",
         option4: "Winching",
@@ -105,16 +105,13 @@ document.addEventListener("DOMContentLoaded", function() {
     questionNumber = getAQuestion();
     incrementQuestions()
 
-
-
-    let answers = document.getElementsByClassName('choice-container');
-      
+    let answers = document.getElementsByClassName('choice-container');   
     
     for (let answer of answers) {      
             answer.addEventListener('click', function() {
-                let givenAnswer = answer.dataset['number'];      
+                let givenAnswer = answer.dataset['number'];  
                
-                checkAnswer(givenAnswer);
+                checkAnswer(givenAnswer, answer);
                 
             })
         }
@@ -123,13 +120,19 @@ document.addEventListener("DOMContentLoaded", function() {
 
  
  function nextQuestion (){
-    console.log("Question Count = " + questionCount); 
+    
+    let answers = document.getElementsByClassName('choice-container');   
+    
+    for (let answer of answers) { 
+     answer.style.backgroundColor = "white";
+    }
+
     incrementQuestions()
     questionCount += 1;
     if(questionCount != 0){
-      console.log("question Number= " + questionNumber);
+  
         questions.splice(questionNumber, 1);
-        console.log(questions);
+        
     }
     questionNumber = getAQuestion();
    
@@ -155,10 +158,12 @@ document.addEventListener("DOMContentLoaded", function() {
      
  };
  
- function checkAnswer(givenAnswer){ 
+ function checkAnswer(givenAnswer, givenDiv){ 
     
                if (givenAnswer == questions[questionNumber].answer) {
-                alert ("Correct");
+
+                givenDiv.style.backgroundColor = "#2eff00";
+                
                 incrementScore();
                 
                 setTimeout(nextQuestion, 1000);
@@ -166,7 +171,8 @@ document.addEventListener("DOMContentLoaded", function() {
               }
     
               else {
-                alert ("incorrect");
+               
+               givenDiv.style.backgroundColor = "red";
                 setTimeout(nextQuestion, 1000);
               
               };        

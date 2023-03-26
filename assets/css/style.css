@@ -20,7 +20,7 @@ body {
 .game-area {
     width: 70%;
     height: 50%;
-    min-height: 300px;
+    min-height: 400px;
     background-color: rgba(220, 241, 250, 0.9); 
     border-radius: 10px;
 
@@ -37,7 +37,6 @@ body {
 
 .answer-area {
     margin-bottom: 30px;
-   /* width: 70%;*/
     height: 30%;
     width: 100%;
     display: flex;
@@ -63,7 +62,6 @@ body {
   }
 
   #count-area{
-    #score-area
       margin: auto;
       text-align: center;
   }
@@ -73,10 +71,13 @@ body {
     width: 75%;
   }
 
-  .indicator-icon{
+
+
+
+  /*.indicator-icon{
     height: 5px;
     width: 5px;
     border-radius: 50%;
     background-color: red;
     border: black;
-  }
+  }*/

@@ -4,14 +4,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Multiple choice sailing quiz">
+    <meta name="keywords" content="sailing, quiz, sailing quiz, yachting, sailing knowledge">
+
     
     <link rel="stylesheet" href="assets/css/style.css">
 
     <title>Sailing Quiz</title>
+
+    <link rel="shortcut icon" type="image/png" href="assets/images/favicon-16x16.png"> 
 </head>
 <body>
  
     <div class="game-area">
+      <div> <p>How to play</p><i class="fa-solid fa-question"></i></div>
 
        <div id="count-area"><h3>Question Number: <span id="question-counter">0</span>/10</h3></div>
 
@@ -20,7 +26,6 @@
      <div class="answer-area">
         <div class="choice-container" data-number="1">
           <p id="choice-text-1" >Choice 1</p>
-          <div class="indicator-icon"></div>
         </div>
         <div class="choice-container" data-number="2">
           <p id="choice-text-2">Choice 2</p>
