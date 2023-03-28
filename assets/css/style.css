@@ -3,7 +3,7 @@
 
 body {
     height: 100vh;
-    background: url('/assets/images/background-image.jpeg')no-repeat, center;
+    background: url('../assets/images/background-image.jpeg')no-repeat, center;
     background-size: cover;
     font-family: Raleway, sans-serif;
     display: flex;
@@ -262,14 +262,19 @@ padding-top: 20px;
     min-height: 450px;
   }
   .choice-container{
-    width: 55%;
-    max-height: 50px;
+    width: 65%;
+    max-height: 80px;
     margin: 10px;
   }
 
   .answer-area{
     margin: 20px;
   }
+
+  #score-area{
+    padding: 20px;
+  }
+
 
   /*Screens smaller than 700px*/
 @media only screen and (max-width: 700px) {
@@ -301,7 +306,14 @@ padding-top: 20px;
 
   .answer-area{
     min-height: 350px;
+    max-width: 90%;
   }
 
+  #score-area {
+    margin: 5px;
+    padding: 5px;
+  }
+
+ 
 }
 
