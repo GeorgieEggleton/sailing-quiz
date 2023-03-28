@@ -3,7 +3,7 @@
 
 body {
     height: 100vh;
-    background: url('../assets/images/background-image.jpeg')no-repeat, center;
+    background: url('assets/images/background-image.jpeg')no-repeat, center;
     background-size: cover;
     font-family: Raleway, sans-serif;
     display: flex;
