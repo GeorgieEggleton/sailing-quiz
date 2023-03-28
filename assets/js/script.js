@@ -120,6 +120,18 @@ document.addEventListener("DOMContentLoaded", function() {
 
  
  function nextQuestion (){
+
+    var resultsModal = document.getElementById("resultsModal");
+    console.log(questionCount);
+if (questionCount >=2){
+    
+    resultsModal.style.display = "block";
+    let oldScore = parseInt(document.getElementById("score").innerText);
+    console.log(oldScore);
+    document.getElementById("model-score").innerText = oldScore;
+   
+}
+
     
     let answers = document.getElementsByClassName('choice-container');   
     
@@ -187,6 +199,8 @@ function incrementQuestions() {
 
     let oldCount = parseInt(document.getElementById("question-counter").innerText);
     document.getElementById("question-counter").innerText = ++oldCount;
+    return oldCount
+    console.log ("old count" + oldCount);
 }
 
 
@@ -209,3 +223,12 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Multiple choice sailing quiz">
+    <meta name="keywords" content="sailing, quiz, sailing quiz, yachting, sailing knowledge">
+
+    
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <title>Sailing Quiz</title>
+
+    <link rel="shortcut icon" type="image/png" href="assets/images/favicon-16x16.png"> 
+</head>
+<body>
+
+    <div class="game-area">
+
+
+      <div id="button-div">
+      <button id="modalbtn" class = "button"><i class="fa-solid fa-question"></i></button>
+    </div>
+     
+       <div id="count-area"><h3>Question Number: <span id="question-counter">0</span>/10</h3></div>
+
+        <h2 id="question">What is the answer to this questions?</h2>
+
+     <div class="answer-area">
+        <div class="choice-container" data-number="1">
+          <p id="choice-text-1" >Choice 1</p>
+        </div>
+        <div class="choice-container" data-number="2">
+          <p id="choice-text-2">Choice 2</p>
+        </div>
+        <div class="choice-container" data-number="3">
+          <p id="choice-text-3">Choice 3</p>
+        </div>
+        <div class="choice-container" data-number="4" >
+          <p id="choice-text-4">Choice 4</p>
+        </div>
+    </div>
+        <div id="score-area"><h3>Score: <span id="score">0</span>/10</h3></div>
+  
+      </div>
+
+      
+    </div>
+<!-- Instructions Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Instructions Modal Content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h3>How to play...</h3>
+    <p>Test your sailing knowledge by answering these 10 questions. Click on the correct answer, if you're right it will go green, if you're wrong it will go red.</p>
+  </div>
+
+</div>
+
+<!-- Results Modal -->
+<div id="resultsModal" class="modal">
+
+  <!-- Results Modal Content -->
+  <div class="results-modal-content">
+    <h3>Well Done!!</h3>
+    <h4>You scored <span id="model-score">0</span>/10</h4>
+    <div><a href="game.html"><button>Play Again</button></a></div>
+  </div>
+
+</div>
+
+
+
+
+
+    <script src="assets/js/script.js"></script>
+    <script src="https://kit.fontawesome.com/ec4c8d1bc4.js" crossorigin="anonymous"></script>
+    
+</body>
+</html>
