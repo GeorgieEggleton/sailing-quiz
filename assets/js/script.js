@@ -123,7 +123,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     var resultsModal = document.getElementById("resultsModal");
     console.log(questionCount);
-if (questionCount >=2){
+if (questionCount >=9){
     
     resultsModal.style.display = "block";
     let oldScore = parseInt(document.getElementById("score").innerText);

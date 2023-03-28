@@ -1,10 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200;400&display=swap');
 
-* {
-    
-}
-
-    
 
 body {
     height: 100vh;
@@ -24,7 +19,7 @@ body {
   border-radius: 10px;
 }
 
-.welcome-area h1, h3, h4, p, a {
+.welcome-area h1, .welcome-area h3, .welcome-area h4, .welcome-area p, .welcome-area a  {
 width: 100%;
 display: flex;
 align-items: center;
@@ -32,6 +27,23 @@ justify-content: center;
 padding-top: 20px;
 }
 
+button{
+  width: 300px;
+  height: 65px;
+  font-size: 16px;
+  background-color: #fef6cc;
+  border: none;
+  border-radius: 15px;
+  text-decoration: none;
+}
+
+button ac{
+ text-decoration: none;
+}
+
+button:hover {
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.5);
+}
 
 .game-area {
     width: 70%;
@@ -46,7 +58,15 @@ padding-top: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
-  
+  padding-top: 5px
+}
+
+.game-area  p, a {
+width: 100%;
+display: flex;
+align-items: center;
+justify-content: flex-start;
+padding: 5px;
 }
 
 #question{
@@ -65,8 +85,8 @@ padding-top: 20px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-
   }
+
   .choice-container{
     width: 40%;
     margin: 10px;
@@ -152,12 +172,6 @@ padding-top: 20px;
 }
 
 
-
-
-
-
-
-
 .resultsModal {
   display: none; 
   position: fixed; 
@@ -196,3 +210,98 @@ padding-top: 20px;
   display: flex;
   justify-content: center;
 }
+
+
+.e404-area {
+  width: 70%;
+  height: 50%;
+  min-height: 400px;
+  background-color: rgba(220, 241, 250, 0.9); 
+  border-radius: 10px;
+}
+
+
+
+
+
+.e404-area h1  {
+width: 100%;
+display: flex;
+align-items: center;
+justify-content: center;
+padding-top: 20px;
+}
+.e404-area h3  {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 20px;
+  }
+
+
+.e404-area p  {
+  width: 100%;
+  text-align: center;
+  display: inline-block;
+  padding-top: 20px;
+  }
+
+.e404-area a  {
+  text-align: center;
+  display: inline-block;
+  padding-top: 20px;
+  }
+
+  /*MEDIA QUIRIES*/
+ /*Screens smaller than 1200px*/
+ @media only screen and (max-width: 1200px) {
+  .game-area{
+    width: 80%;
+    height: 80%;
+    min-height: 450px;
+  }
+  .choice-container{
+    width: 55%;
+    max-height: 50px;
+    margin: 10px;
+  }
+
+  .answer-area{
+    margin: 20px;
+  }
+
+  /*Screens smaller than 700px*/
+@media only screen and (max-width: 700px) {
+
+.game-area{
+  width: 90%;
+  height: 90%;
+  min-height: 450px;
+}
+
+#modalbtn {
+  height: 30px;
+  margin: 5px;
+}
+
+#button-div{
+  height: 30px;
+}
+
+#question{
+  font-size: 20px;
+}
+  .choice-container{
+    width: 75%;
+    max-height: 50px;
+    margin: 10px;
+    display: block;
+  }
+
+  .answer-area{
+    min-height: 350px;
+  }
+
+}
+
