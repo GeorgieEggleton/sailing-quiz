@@ -3,7 +3,7 @@
 
 body {
     height: 100vh;
-    background: url('assets/images/background-image.jpeg')no-repeat, center;
+    background: url('../images/background-image.jpeg')no-repeat, center;
     background-size: cover;
     font-family: Raleway, sans-serif;
     display: flex;
@@ -11,6 +11,7 @@ body {
     justify-content: center; 
 }
 
+/* HOME PAGE*/
 .welcome-area {
   width: 70%;
   height: 50%;
@@ -27,7 +28,8 @@ justify-content: center;
 padding-top: 20px;
 }
 
-button{
+/*PLAY BUTTON*/
+#home-button{
   width: 300px;
   height: 65px;
   font-size: 16px;
@@ -37,7 +39,7 @@ button{
   text-decoration: none;
 }
 
-button ac{
+button a{
  text-decoration: none;
 }
 
@@ -45,12 +47,13 @@ button:hover {
   box-shadow: 0 3px 10px rgb(0 0 0 / 0.5);
 }
 
+/*GAME AREA*/
 .game-area {
-    width: 70%;
-    height: 50%;
-    min-height: 400px;
-    background-color: rgba(220, 241, 250, 0.9); 
-    border-radius: 10px;
+  width: 70%;
+  height: 50%;
+  min-height: 400px;
+  background-color: rgba(220, 241, 250, 0.9); 
+  border-radius: 10px;
 }
 
 .game-area h1, h3, h4,  {
@@ -70,55 +73,59 @@ padding: 5px;
 }
 
 #question{
-    display: flex;
-    justify-content: center;
-    margin-top: 30px;
-    padding-left: 30px;
-    padding-right: 30px;
-
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 
+/* THE ANSWER BUTTONS*/
 .answer-area {
-    margin-bottom: 30px;
-    height: 30%;
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
+  margin-bottom: 30px;
+  height: 30%;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 
-  .choice-container{
-    width: 40%;
-    margin: 10px;
-    font-size: 12px;
-    padding-left: 10px;
-    display: inline-block;
-    background: white;
-  }
+.choice-container{
+  width: 40%;
+  margin: 10px;
+  font-size: 12px;
+  padding-left: 10px;
+  display: inline-block;
+  background: white;
+}
 
-  .choice-container:hover {
-    box-shadow: 0 3px 10px rgb(0 0 0 / 0.5);
-  }
+.choice-text{
+  width: 75%;
+}
 
-  #score-area{
-    margin: auto;
-    text-align: center;
-  }
+.choice-container:hover {
+   box-shadow: 0 3px 10px rgb(0 0 0 / 0.5);
+}
 
-  #count-area{
-      margin: auto;
-      text-align: center;
-  }
+/* SCORE & QUESTION COUNT*/
+#score-area{
+  margin: auto;
+  text-align: center;
+}
 
-  
-  .choice-text{
-    width: 75%;
-  }
-  #button-div{
-    display: flex;
-    justify-content: flex-end;
-  }
+#count-area{
+  margin: auto;
+  text-align: center;
+}
 
+/* HOW TO PLAY BUTTON AREA*/
+#button-div{
+  display: flex;
+  justify-content: flex-end;
+}
+
+
+/*MODALS*/  
 #modalbtn {
   background: none;
   font-size: 25px;
@@ -133,7 +140,6 @@ padding: 5px;
   cursor: pointer;
 }
 
-/* The Modal (background) */
 .modal {
   display: none; 
   position: fixed; 
@@ -147,7 +153,6 @@ padding: 5px;
   background-color: rgba(0,0,0,0.4); 
 }
 
-/* Modal Content/Box */
 .modal-content {
   background-color: #fefefe;
   margin: 15% auto; 
@@ -156,7 +161,6 @@ padding: 5px;
   width: 70%; 
 }
 
-/* The Close Button */
 .close {
   color: #aaa;
   float: right;
@@ -171,7 +175,7 @@ padding: 5px;
   cursor: pointer;
 }
 
-
+/*RESULTS MODAL*/
 .resultsModal {
   display: none; 
   position: fixed; 
@@ -184,7 +188,6 @@ padding: 5px;
   background-color: rgb(0,0,0); 
   background-color: rgba(0,0,0,0.4); 
 }
-
 
 .results-modal-content {
   background-color: #fefefe;
@@ -211,7 +214,23 @@ padding: 5px;
   justify-content: center;
 }
 
+#play-again-button-div{
+  width:100%;
+}
 
+#play-again-button{
+  width: 300px;
+  height: 65px;
+  font-size: 16px;
+  background-color: #fef6cc;
+  border: none;
+  border-radius: 15px;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+}
+
+/*404 PAGE*/
 .e404-area {
   width: 70%;
   height: 50%;
@@ -220,38 +239,34 @@ padding: 5px;
   border-radius: 10px;
 }
 
-
-
-
-
 .e404-area h1  {
-width: 100%;
-display: flex;
-align-items: center;
-justify-content: center;
-padding-top: 20px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 20px;
 }
+
 .e404-area h3  {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   padding-top: 20px;
-  }
-
+}
 
 .e404-area p  {
   width: 100%;
   text-align: center;
   display: inline-block;
   padding-top: 20px;
-  }
+}
 
 .e404-area a  {
   text-align: center;
   display: inline-block;
   padding-top: 20px;
-  }
+}
 
   /*MEDIA QUIRIES*/
  /*Screens smaller than 1200px*/
@@ -275,7 +290,7 @@ padding-top: 20px;
     padding: 20px;
   }
 
-
+ }
   /*Screens smaller than 700px*/
 @media only screen and (max-width: 700px) {
 

@@ -1,3 +1,8 @@
+/**
+ * This is the arrey of questions that will be selected at random
+ * more could be added to this at a later date
+ */
+
 let questions = [
     {
         question: "What is the left side of the boat called?",
@@ -98,7 +103,10 @@ let questionNumber;
 let questionCount = 0;
 
 
-
+/**
+ * On game.html page load run the first question, increment the question count, add the event listeners to 
+ * the answer options and check the answer.
+ */
 
 document.addEventListener("DOMContentLoaded", function() {
     
@@ -118,40 +126,53 @@ document.addEventListener("DOMContentLoaded", function() {
     
     });
 
+
+
+ /**
+ * Checks what question number user is on. 
+ * If 10 questions have been asked display results.
+ * If fewer than 10, change answer box background back to white
+ * Increment question count
+ * Remove the last question asked from the arrey 
+ * Load the next question.
+ */   
  
  function nextQuestion (){
 
     var resultsModal = document.getElementById("resultsModal");
-    console.log(questionCount);
-if (questionCount >=9){
     
-    resultsModal.style.display = "block";
-    let oldScore = parseInt(document.getElementById("score").innerText);
-    console.log(oldScore);
-    document.getElementById("model-score").innerText = oldScore;
-   
-}
+    if (questionCount >=9){
+    
+        resultsModal.style.display = "block";
+        let oldScore = parseInt(document.getElementById("score").innerText);
+        console.log(oldScore);
+        document.getElementById("model-score").innerText = oldScore;
+    }
 
-    
     let answers = document.getElementsByClassName('choice-container');   
     
     for (let answer of answers) { 
-     answer.style.backgroundColor = "white";
+        answer.style.backgroundColor = "white";
     }
 
     incrementQuestions()
     questionCount += 1;
+
     if(questionCount != 0){
   
-        questions.splice(questionNumber, 1);
-        
+        questions.splice(questionNumber, 1);  
     }
+
     questionNumber = getAQuestion();
     
 }
  
  
  
+/**
+ * This function displays a question and the answer options and retunrs which question from the arrey
+ * was asked. 
+ */  
  function getAQuestion(){
 
      let x = Math.floor(Math.random() *questions.length);
@@ -162,39 +183,46 @@ if (questionCount >=9){
      document.getElementById("choice-text-3").innerHTML=questions[x].option3;
      document.getElementById("choice-text-4").innerHTML=questions[x].option4;
    
-     return x;
-     
-     
-     
+     return x; 
  };
  
+
+ /**
+ * This function checks the answer given by the user against the correct answer. 
+ * If correct changes the background colour to green and incremets the score by 1, waits 1 second and moves to next question.
+ * If incorrect changes the background colour to red , waits 1 second and moves to next question.
+ */  
  function checkAnswer(givenAnswer, givenDiv){ 
     
-               if (givenAnswer == questions[questionNumber].answer) {
+    if (givenAnswer == questions[questionNumber].answer) {
 
-                givenDiv.style.backgroundColor = "#2eff00";
-                
-                incrementScore();
-                
-                setTimeout(nextQuestion, 1000);
+        givenDiv.style.backgroundColor = "#2eff00";
+        incrementScore();
+        setTimeout(nextQuestion, 1000);
                
-              }
+    }
     
-              else {
+    else {
                
-               givenDiv.style.backgroundColor = "red";
-                setTimeout(nextQuestion, 1000);
+        givenDiv.style.backgroundColor = "red";
+        setTimeout(nextQuestion, 1000);
               
-              };        
+    };        
 };
 
 
+/**
+ * This updates the score and adds 1 each time the user gives a correct answer
+ */  
 function incrementScore() {
 
     let oldScore = parseInt(document.getElementById("score").innerText);
     document.getElementById("score").innerText = ++oldScore;
 }
 
+/**
+ * This updates the question count
+ */ 
 function incrementQuestions() {
 
     let oldCount = parseInt(document.getElementById("question-counter").innerText);
