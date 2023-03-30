@@ -20,7 +20,7 @@ body {
   border-radius: 10px;
 }
 
-.welcome-area h1, .welcome-area h3, .welcome-area h4, .welcome-area p, .welcome-area a  {
+.welcome-area h1, .welcome-area h3, .welcome-area h4, .welcome-area p   {
 width: 100%;
 display: flex;
 align-items: center;
@@ -28,22 +28,27 @@ justify-content: center;
 padding-top: 20px;
 }
 
+
+
 /*PLAY BUTTON*/
-#home-button{
-  width: 300px;
-  height: 65px;
-  font-size: 16px;
-  background-color: #fef6cc;
-  border: none;
-  border-radius: 15px;
-  text-decoration: none;
+
+.button{
+width: 30%;
+height: 50px;
+font-size: 16px;
+background-color: #fef6cc;
+border-radius: 15px;
+text-decoration: none;
+padding: 0px;
+margin: 0 auto;
+color: black;
+display: flex;
+flex-direction: column;
+justify-content: center;
+text-align: center;
 }
 
-button a{
- text-decoration: none;
-}
-
-button:hover {
+.button:hover {
   box-shadow: 0 3px 10px rgb(0 0 0 / 0.5);
 }
 
@@ -160,7 +165,7 @@ padding: 5px;
 }
 
 .modal {
-  display: none; 
+  display: none;
   position: fixed; 
   z-index: 1;
   left: 0;
@@ -233,21 +238,6 @@ padding: 5px;
   justify-content: center;
 }
 
-#play-again-button-div{
-  width:100%;
-}
-
-#play-again-button{
-  width: 300px;
-  height: 65px;
-  font-size: 16px;
-  background-color: #fef6cc;
-  border: none;
-  border-radius: 15px;
-  text-decoration: none;
-  display: flex;
-  justify-content: center;
-}
 
 /*404 PAGE*/
 .e404-area {
