@@ -111,7 +111,7 @@ let questionCount = 0;
 document.addEventListener("DOMContentLoaded", function() {
     
     questionNumber = getAQuestion();
-    incrementQuestions()
+    incrementQuestions();
 
     let answers = document.getElementsByClassName('choice-container');   
     
@@ -121,7 +121,7 @@ document.addEventListener("DOMContentLoaded", function() {
                
                 checkAnswer(givenAnswer, answer);
                 
-            })
+            });
         }
     
     });
@@ -155,7 +155,7 @@ document.addEventListener("DOMContentLoaded", function() {
         answer.style.backgroundColor = "white";
     }
 
-    incrementQuestions()
+    incrementQuestions();
     questionCount += 1;
 
     if(questionCount != 0){
@@ -184,7 +184,7 @@ document.addEventListener("DOMContentLoaded", function() {
      document.getElementById("choice-text-4").innerHTML=questions[x].option4;
    
      return x; 
- };
+ }
  
 
  /**
@@ -207,8 +207,8 @@ document.addEventListener("DOMContentLoaded", function() {
         givenDiv.style.backgroundColor = "red";
         setTimeout(nextQuestion, 1000);
               
-    };        
-};
+    }      
+}
 
 
 /**
@@ -227,8 +227,7 @@ function incrementQuestions() {
 
     let oldCount = parseInt(document.getElementById("question-counter").innerText);
     document.getElementById("question-counter").innerText = ++oldCount;
-    return oldCount
-    console.log ("old count" + oldCount);
+    return oldCount;
 }
 
 
@@ -240,23 +239,14 @@ var span = document.getElementsByClassName("close")[0];
 
 btn.onclick = function() {
   modal.style.display = "block";
-}
+};
 
 span.onclick = function() {
   modal.style.display = "none";
-}
+};
 
 window.onclick = function(event) {
   if (event.target == modal) {
     modal.style.display = "none";
   }
-}
-
-
-
-
-
-
-
-
-
+};
