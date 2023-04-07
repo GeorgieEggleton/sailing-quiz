@@ -80,6 +80,13 @@ There is a custom 404 error page inluded in case the user was to naviage to a br
 
 ![QuestionCounter](/assets/images/readme-images/404page-screenshot.png)
 
+## Responsiveness
+
+Media queries were used to allow the site to be responsive to use on desktop and mobile devices. the main alterations were on larger screens the 4 answer options stack 2x2 on smaller mobile devies the four answers stack in a single column. During development this was tested using Google's dev tools. After deployment this was tested on the following devices:
+- MacBook Air
+- iPhone 13 Pro Max
+- Armor 11T
+
 
 ## TESTING 
 
@@ -100,6 +107,53 @@ I tried to correct number 1 but with using the dot notation it would not reckoni
 
 The second warning, following discussions with a tutor, was decided best to leave alone as would require major alterations to how the script worked in order to fix this and as no errors are showing in the console it is not beileved to be a big issue. 
 ![JSHintValidator](/assets/images/readme-images/jshint-screenshot.png)
+
+
+Each page of the site was also run through Google Lighthouse and had good overall scores. 
+![HomepageLighthouse](/assets/images/readme-images/homepage-lighthouse.png)
+![HomepageLighthouse](/assets/images/readme-images/gamepage-lighthouse.png)
+
+
+## Technologies
+
+- HTML - The main structure of the website uses HTML.
+- CSS The website was styled using custom CSS linked to an external file.
+- Javascript - The code for the game was written in Javascript and linked via an external file. 
+- Gitpod - The website was developed using Gitpod.
+- GitHub - The site is hosted on GitHub. 
+- Favicon.io - Favicon.io was used to create a small sailing boat favicon [favicon.io](https://favicon.io/favicon-converter/)
+- Balsamiq - wireframes were created using [Balsamiq](https://balsamiq.com/wireframes/desktop/)
+- GitHub Pages - The site is deployed using [GitHub Pages](https://github.com/GeorgieEggleton/paragon)
+        The deployment steps taken were:-
+            - In the GitHub repository, go to the settings
+            - In the left hand menu select Pages
+            - Set source to "Deploy from a branch"
+            - In the Branch section set the drop down menus to "main" & "/(root)"
+            - Click 'Save'
+
+## Testing 
+
+![Testing](/assets/images/readme-images/testing.png)
+
+
+## Bugs & Fixes
+On testing it was found on some screensizes the score drops off the bottom of the game area. I have not yet had a chance to fix this but suspect the componant div's within the game area are too big so need reducing. 
+
+
+## Wireframe Design
+
+Although basic the initial design was done in balsamic 
+
+![WireframeDesign](/assets/images/readme-images/wireframe.png)
+
+
+## Credits
+
+I used the following youtube tutorial to help with the event listeners on the answer option buttons - https://www.youtube.com/playlist?list=PLDlWc9AfQBfZIkdVaOQXi1tizJeNJipEx
+
+
+
+
 
 
 
