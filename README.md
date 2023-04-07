@@ -152,6 +152,11 @@ Although basic the initial design was done in balsamic
 I used the following youtube tutorial to help with the event listeners on the answer option buttons - https://www.youtube.com/playlist?list=PLDlWc9AfQBfZIkdVaOQXi1tizJeNJipEx
 
 
+## Possible Future Features
+
+1. Add more questions to the arrey so that the same 10 aren't repeated each time the user plays the game. 
+2. Add a second game option to include images with quesitons on navigation marks. 
+3. Add moving images with COLREG questions. 
 
 
 
